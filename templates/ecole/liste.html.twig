@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page d'Affichage des Ecole{% endblock %}
+
+{% block body %}
+
+<div class="col-md-12">
+    <div class="card card-plain table-plain-bg">
+      <div class="card-body table-full-width table-responsive">
+            <table class="table table-hover ">
+                <thead>
+                    <tr>
+                        <th class="font-weight-bold text-dark">NOM ECOLE</th>
+                        <th class="font-weight-bold text-dark">ADRESSE</th>
+                        <th class="font-weight-bold text-dark">EDITION</th>
+                        <th class="font-weight-bold text-dark">SUPPRESSION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        {% for eco in ecole %}
+                            <tr>
+                                <td class="font-weight-bold text-success">{{ eco.nom}}</td>
+                                <td class="font-weight-bold text-success">{{ eco.adresse}}</td>
+                                <td><a class="btn btn-lg bg-success font-weight-bold text-dark btn-md t" hr href="{{ path('edit_ecole', {id: eco.id}) }}">EDITER</a></td>
+                                <td>
+                                    <form method="post" action="{{ path('delete_ecole', {id: eco.id}) }}">
+                                    <input type="hidden" name="method" value="DELETE">
+                                    <input type="hidden" name="_token" value="{{ csrf_token('delete'~ eco.id) }}">
+                                    <button class="btn btn-danger">SUPPRIMER</button>
+                                    </form>
+
+                                </td>
+                            </tr>
+                        {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

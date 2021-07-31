@@ -1,0 +1,111 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page d'Ajout d'ecole{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid mt-8 col-md-10">
+        {{ form_start(form) }}
+        <div class="row">
+                <div class="col-xl-4 col-md-4">
+                    
+                        {{ form_row(form.nom) }}
+                    
+                </div>
+
+                <div class="col-xl-4 col-md-4">
+                    
+                        {{ form_row(form.adresse) }}
+                    
+                </div>
+        </div>  
+                <div class="row">
+                
+                   <div class="col-md-8 text-center">{{ form_row(form.submit, {'label':'Ajouter'}) }}</div>
+                
+              </div>
+
+        
+        {{ form_end(form) }}
+
+ </div>
+
+                    <!--div class="container-fluid">
+                        <h1 class="mt-4">Page d'Ajout de Produit</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                        <-div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Primary Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body">Warning Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">Success Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body">Danger Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div-->
+                        <!--form action="" method="post">
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <div class="card mb-2">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-area mr-1"></i>
+                                        Libelle du Produit
+                                    </div>
+                                    <div class="card-body"><input type="text" name="libelle"></div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="card mb-2">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-bar mr-1"></i>
+                                        Nom du Produit
+                                    </div>
+                                    <div class="card-body"><input type="text" name="nom"></div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="card mb-2">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-bar mr-1"></i>
+                                        Quantite en Stock
+                                    </div>
+                                    <div class="card-body"><input placeholder="Quantite" type="number" name="qt"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div  class="row offset-5  text-white"><button class="btn btn-lg bg-primary font-weight-bold btn-md t" name="btnSAveP">Enregistrer</button></div>
+                        </form-->
+
+
+    
+{% endblock %}
